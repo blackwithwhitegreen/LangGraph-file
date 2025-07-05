@@ -3,6 +3,7 @@ from langgraph.graph import StateGraph, START, END
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import HumanMessage, AIMessage
 from dotenv import load_dotenv, find_dotenv
+from langchain_groq import ChatGroq
 import os
 
 load_dotenv(find_dotenv())
@@ -10,7 +11,7 @@ load_dotenv(find_dotenv())
 class AgentState(TypedDict):
     messages: List[Union[HumanMessage,AIMessage]]
 
-
+# If the Google Gemini model is not working due to out of couta, we can use Groq model.
 llm = ChatGoogleGenerativeAI(
     model="models/gemini-1.5-flash-latest",
     temperature=1

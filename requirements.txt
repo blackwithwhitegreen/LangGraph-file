@@ -48,12 +48,23 @@ langchain_experimental
 #FASSIA
 faiss-cpu
 
+# Chroma
+langchain_chroma
+
 
 # langchain with deepseek
 langchain-deepseek
 
 # DuckDuck-Go
 duckduckgo-search
+
+# Google Text Embedding
+vertexai
+
+
+# Sentence Transformer
+sentence-transformers
+
 
 #pip install --upgrade langchain langchain-community
 
